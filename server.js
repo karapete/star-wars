@@ -22,7 +22,7 @@ var characters = [{
   name: "Yoda",
   role: "Jedi Master",
   age: 900,
-  forcePoints: 2000
+  forcePoints: 2000n
 }, {
   routeName: "darthmaul",
   name: "Darth Maul",
@@ -85,6 +85,6 @@ app.post("/api/new", function(req, res) {
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
+app.listen(process.env.PORT||PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
